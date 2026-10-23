@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atelier MoveSpot | DOM et JavaScript</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <main class="mx-auto max-w-2xl space-y-8 px-4 py-10">
+
+    <!-- Étapes 3 et 4 : titre et message -->
+    <header>
+      <h1 id="titre" class="text-3xl font-extrabold text-teal-700">MoveSpot</h1>
+      <p id="message" class="mt-2 min-h-6 text-slate-600">Le message apparaîtra ici.</p>
+    </header>
+
+    <!-- Étapes 5 et 6 : compteur de places -->
+    <section class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+      <h2 class="text-xl font-bold text-slate-900">Places restantes</h2>
+      <p class="mt-2 text-4xl font-extrabold text-slate-900"><span id="places">0</span></p>
+      <button id="btn-reserver" type="button"
+        class="mt-4 rounded-xl bg-teal-600 px-4 py-2 font-semibold text-white transition hover:bg-teal-700">
+        Réserver une place
+      </button>
+      <button id="btn-annuler" type="button"
+        class="mt-4 rounded-xl bg-teal-600 px-4 py-2 font-semibold text-white transition hover:bg-teal-700">
+        annuler une place
+      </button>
+    </section>
+
+    <!-- Étapes 7 et 8 : cartes de cours à sélectionner -->
+    <section>
+      <h2 class="mb-3 text-xl font-bold text-slate-900">Choisissez un cours</h2>
+      <div class="grid gap-3 sm:grid-cols-3">
+        <div id="carte-yoga" data-nom="Yoga Flow"
+          class="carte cursor-pointer rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
+          <h3 class="font-semibold text-slate-900">Yoga Flow</h3>
+          <p class="text-sm text-slate-600">60 min</p>
+        </div>
+        <div id="carte-hiit" data-nom="HIIT Express"
+          class="carte cursor-pointer rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
+          <h3 class="font-semibold text-slate-900">HIIT Express</h3>
+          <p class="text-sm text-slate-600">45 min</p>
+        </div>
+        <div id="carte-pilates" data-nom="Pilates Core"
+          class="carte cursor-pointer rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
+          <h3 class="font-semibold text-slate-900">Pilates Core</h3>
+          <p class="text-sm text-slate-600">55 min</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Étapes 9 et 10 : liste créée par JavaScript -->
+    <section class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+      <h2 class="text-xl font-bold text-slate-900">Programme de la semaine</h2>
+      <ul id="liste-cours" class="mt-3 list-inside list-disc space-y-1 text-slate-700">
+        <!-- Vide : c'est JavaScript qui va la remplir -->
+      </ul>
+      <p id="total" class="mt-4 font-semibold text-teal-700"></p>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
